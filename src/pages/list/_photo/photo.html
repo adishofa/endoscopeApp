@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Diagnosa Foto</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="rs-pesan-field">
+  
+    <ion-item>
+      <ion-label stacked>Photo Telinga Kiri:</ion-label>
+    </ion-item>
+    
+    <ion-grid>
+      
+      <ion-row>          
+          <input type="file" [(ngModel)]="user.telinga_ki" #fileInput style="visibility: hidden; height: 0px" name="files[0]" (change)="processWebImageTelingaKi($event)" />
+          <ion-col (click)="getPictureTelingaKi()">
+            <div class="rs-icon-add" *ngIf="!this.form.controls.telinga_ki.value">
+              <ion-icon name="add"></ion-icon>
+            </div>
+            <div class="rs-icon-ex" [style.backgroundImage]="getTelingaKiStyle()" *ngIf="this.form.controls.telinga_ki.value"></div>
+          </ion-col>          
+      </ion-row>
+
+    </ion-grid>
+    <!-- <ion-item>
+      <ion-label stacked>Photo Telinga Kanan:</ion-label>
+    </ion-item>
+    
+    <ion-grid>
+      
+      <ion-row>          
+          <input type="file" [(ngModel)]="user.telinga_ka" #fileInput style="visibility: hidden; height: 0px" name="files[1]" (change)="processWebImageTelingaKa($event)" />
+          <ion-col (click)="getPictureTelingaKa()">
+            <div class="rs-icon-add" *ngIf="!this.form.controls.telinga_ka.value">
+              <ion-icon name="add"></ion-icon>
+            </div>
+            <div class="rs-icon-ex" [style.backgroundImage]="getTelingaKaStyle()" *ngIf="this.form.controls.telinga_ka.value"></div>
+          </ion-col>          
+      </ion-row>
+
+    </ion-grid> -->
+
+    <ion-item >
+      <ion-label stacked>Kesimpulan:</ion-label>
+      <ion-textarea [(ngModel)]="user.kesimpulan" name="kesimpulan" #userCode="ngModel" required autocomplete="off"></ion-textarea>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>
+<ion-footer no-padding>
+    <button class="rs-pesan-btm" ion-item block (click)="submitDiagnosa()" >
+      <span>Submit</span>
+    </button>
+</ion-footer>

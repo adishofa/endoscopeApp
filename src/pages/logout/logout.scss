@@ -1,0 +1,17 @@
+page-logout {
+    .e-logging-out{
+        text-align: center;
+        padding: 80px 30px;
+        ion-spinner * {
+            width: 48px;
+            height: 48px;
+            stroke: #00a876;
+        }
+        .e-logging-out-text{
+            display: block;
+            padding-top: 5px;
+            color: #898989;
+        }
+    }
+    
+}

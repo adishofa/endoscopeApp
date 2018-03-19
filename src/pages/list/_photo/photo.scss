@@ -1,0 +1,264 @@
+$primary-color: #2fb9a0;
+page-photo {
+    .rs-item-akun {
+        padding: 0px;
+        border-bottom: 0;
+        min-height: 50px;
+        .item-inner {
+            padding: 0px;
+            ion-label {
+                margin: 0;
+            }
+        }
+    }
+
+    .datetime-md {
+        padding: 13px 8px 13px 8px;
+    }
+
+    .rs-icon-add {
+      height: 85px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #dedede;
+      margin: auto;
+      ion-icon {
+        margin: 1.3rem;
+      }
+    }
+    .rs-icon-ex {
+      height: 85px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #dedede;
+      margin: auto;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .rs-katering-select {
+        border: 1px solid #dedede;
+        margin-top: 10px;
+        border-radius: 7px;
+        padding-left: 10px !important;
+        width: 200px;
+    }
+
+    .item-md .radio-md[item-left] {
+        margin: 11px 7px 10px 4px;
+    }
+    .item.item-md .checkbox-md {
+        margin: 9px 7px 9px 4px;
+    }
+
+    .rs-info-hr {
+        background: #dedede;
+        height: 40px;
+        .item-md {
+            background: #dedede;
+            height: 40px;
+            ion-label {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            .item-inner {
+                .input-wrapper {
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+  .rs-pesan-btm {
+    text-align: center;
+    line-height: 20px;
+    width: 100%;
+    background: $primary-color;
+    border: 1px solid $primary-color;
+    font-size: 18px;
+    font-weight: 300;
+    padding-left: 0px;
+    span {
+        color: #fff;
+    }
+    .item-md.item-block .item-inner {
+      padding-right: 0px;
+      border-bottom: 0px solid #dedede;
+    }
+  }
+
+  textarea.text-input {
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    background-color: #ececec;
+    padding: 8px;
+  }
+    .item-md ion-avatar[item-start] {
+        margin: 3px 16px 3px 0;
+    }
+    .item-md ion-avatar img {
+        width: 25px;
+        height: 25px;
+    }
+    ion-avatar {
+      min-width: 25px !important;
+      min-height: 25px !important;
+    }
+    .list-md .item-block .item-inner {
+        border-bottom: 0;
+    }
+
+    #profile-bg {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 135px;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 20%;
+      background-color: rgba(47, 185, 160, 0.25);
+
+      text-align: center;
+    }
+    .rs-save-btn {
+      color: $primary-color;
+    }
+    .rs-akun-ubah {
+      line-height: 12px;
+      background-color: #ff3939;
+      color: #fff;
+      border-radius: 20px;
+      right: 76px;
+      top: 20px;
+      position: absolute;
+      text-transform: none;
+      height: 40px;
+      width: 40px;
+      font-weight: 300;
+      border: 2px solid #fff;
+    }
+   
+    .input-cover{
+      border-bottom: 1px solid #dedede;
+    }
+
+    .scroll-content{
+      padding-bottom: 0px !important;
+    }
+
+    #profile-image {
+      display: block;
+      border-radius: 100px;
+      border: 1px solid #fff;
+      width: 100px;
+      height: 100px;
+      margin: 18px auto 0px;
+      box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
+    }
+
+    .list-item-content {
+      padding: 5px;
+    }
+
+    .rs-wkt {
+        border-left: 1px solid #dedede;
+    }
+
+    .list-item {
+      color: #666666;
+    }
+    .rs-pesan-field {
+      margin-bottom: 0px;
+    }
+    .rs-list-map {
+      position: relative;
+      margin-bottom: 0px;
+      #map {
+        width: 100%;
+        height: 250px;
+      }
+      .centerMarker{
+        position:absolute;
+        /*url of the marker*/
+        background: url('../assets/img/1x/rawatsehat_6.png') no-repeat;
+        /*center the marker*/
+        top:36%;
+        left:50%;
+        z-index:1;
+        /*fix offset when needed*/
+        margin-left:-17px;
+        margin-top:-20px;
+        /*size of the image*/
+        height:50px;
+        width:50px;
+        cursor:pointer;
+      }
+      .current-location {
+        position: absolute;
+        // background-color: #fff !important;
+        right: 3%;
+        width: 30px;
+        bottom: 40% !important;
+        button {
+          background-color: #fff;
+          height: 2.9rem;
+          width: 2.9rem;
+          img {
+            width: 20px;
+          }
+        }
+        .button-ios.activated {
+          background-color: transparent;
+        }
+      }
+      .address-view {
+        height: 35%;
+      }
+      ion-content {
+        background-color: transparent !important;
+      }
+      .go-back-button, .search-button {
+        background-color: transparent !important;
+        box-shadow: none;
+        .activated {
+          background-color: transparent !important;
+        }
+      }
+      .search-button {
+        ion-icon {
+          font-size: 2.7rem !important;
+        }
+      }
+      .back-btn, .search-btn {
+        position: absolute;
+        ion-icon {
+          color: #000;
+        }
+      }
+      .search-btn {
+        left: 85%;
+      }
+      .search-box {
+        position: absolute;
+        top: 2%;
+        z-index: 999;
+      }
+      ion-textarea {
+        font-size: 14px;
+      }
+      .ios, .md {
+        home-page {
+          .scroll {
+            height: 100%
+          }
+          #map {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }  
+    }  
+}

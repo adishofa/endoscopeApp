@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Endoscope Apps</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="doLogout()">
+        <ion-icon name="ios-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-row class="rs-search-online">
+    <ion-col>
+      <ion-searchbar class="rs-search-bar"
+        [(ngModel)]="myInput"
+        [showCancelButton]="shouldShowCancel"
+        (ionInput)="onInput($event)"
+        (ionCancel)="onCancel($event)">
+      </ion-searchbar>
+    </ion-col>
+  </ion-row>
+
+</ion-header>
+
+<ion-content>
+  
+  <ion-list>
+    <ion-item class="rs-item-riwayat" *ngFor="let item of items | async">
+      <button ion-item (click)="openItem()">
+        <h2>{{item.nama}}<span class="e-date"> {{item.month}}</span></h2>
+        <h3>{{item.noRekam}}</h3>
+        <div class="rs-riwayat-detil-list"></div>
+        <ion-note item-end>
+          <button ion-button icon-only small color="secondary">
+            <ion-icon name="print"></ion-icon>
+          </button>
+          <button ion-button icon-only small color="primary">
+            <ion-icon name="mail"></ion-icon>
+          </button>
+        </ion-note>
+      </button>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="green" (click)="createNew()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>
